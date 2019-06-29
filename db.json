@@ -1,0 +1,43 @@
+{
+  "logs": [
+    {
+      "id": 1,
+      "message": "Change hdd on workstation 005",
+      "attention": false,
+      "date": "03-02-2019",
+      "tech": "Jon Doe"
+    },
+    {
+      "id": 2,
+      "message": "Workstation 006 not posting",
+      "attention": true,
+      "date": "04-02-2019",
+      "tech": "Artour Babaev"
+    },
+    {
+      "id": 3,
+      "message": "Change memory on workstation 023",
+      "attention": false,
+      "date": "03-02-2019",
+      "tech": "Gustav Mag"
+    }
+  ],
+  "techs": [
+    {
+      "id": 1,
+      "name": "Jon Doe"
+    },
+    {
+      "id": 2,
+      "name": "Artour Babaev"
+    },
+    {
+      "id": 3,
+      "name": "Gustav Mag"
+    },
+    {
+      "name": "Rebecca Gray",
+      "id": 5
+    }
+  ]
+}
