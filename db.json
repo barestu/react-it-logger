@@ -25,19 +25,18 @@
   "techs": [
     {
       "id": 1,
-      "name": "Jon Doe"
+      "firstname": "John",
+      "lastname": "Doe"
     },
     {
       "id": 2,
-      "name": "Artour Babaev"
+      "firstname": "Sam",
+      "lastname": "Smith"
     },
     {
       "id": 3,
-      "name": "Gustav Mag"
-    },
-    {
-      "name": "Rebecca Gray",
-      "id": 5
+      "firstname": "Amber",
+      "lastname": "White"
     }
   ]
 }
