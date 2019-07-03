@@ -1,25 +1,25 @@
 {
   "logs": [
     {
-      "id": 1,
-      "message": "Change hdd on workstation 005",
+      "message": "Change network card on server 009",
       "attention": false,
-      "date": "03-02-2019",
-      "tech": "Jon Doe"
+      "tech": "John Doe",
+      "date": "2019-07-03T16:42:29.658Z",
+      "id": 1
     },
     {
       "id": 2,
-      "message": "Workstation 006 not posting",
-      "attention": true,
-      "date": "04-02-2019",
-      "tech": "Artour Babaev"
+      "message": "Fixed error monitor on machine 010",
+      "attention": false,
+      "tech": "John Doe",
+      "date": "2019-07-03T17:17:32.180Z"
     },
     {
       "id": 3,
-      "message": "Change memory on workstation 023",
-      "attention": false,
-      "date": "03-02-2019",
-      "tech": "Gustav Mag"
+      "message": "Blank screen on machine 303",
+      "attention": true,
+      "tech": "Sara Wilson",
+      "date": "2019-07-03T17:19:06.821Z"
     }
   ],
   "techs": [

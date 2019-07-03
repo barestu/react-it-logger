@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { addLog } from '../../redux/log/logActions';
 import M from 'materialize-css/dist/js/materialize.min.js';
 
-const LogModalAdd = () => {
+const LogModalAdd = ({ addLog }) => {
   const [message, setMessage] = useState('');
   const [attention, setAttention] = useState(false);
   const [tech, setTech] = useState('');
@@ -10,15 +13,21 @@ const LogModalAdd = () => {
     if (message === '' || tech === '') {
       M.toast({ html: 'Please enter a message and tech'});
     } else {
-      console.log('object', { message, attention, tech });
-      clearForm();
-    }
-  };
+      const newLog = {
+        message,
+        attention,
+        tech,
+        date: new Date(),
+      };
 
-  const clearForm = () => {
-    setMessage('');
-    setAttention(false);
-    setTech('');
+      addLog(newLog);
+
+      M.toast({ html: `Log added by ${tech}` });
+
+      setMessage('');
+      setAttention(false);
+      setTech('');
+    }
   };
 
   return (
@@ -33,7 +42,6 @@ const LogModalAdd = () => {
               name="message"
               value={message}
               onChange={e => setMessage(e.target.value)}
-              autoFocus
             />
             <label htmlFor="message" className="active">Log Message</label>
           </div>
@@ -94,4 +102,11 @@ const footerStyle = {
   paddingRight: 20,
 };
 
-export default LogModalAdd;
+LogModalAdd.propTypes = {
+  addLog: PropTypes.func.isRequired,
+};
+
+export default connect(
+  null,
+  { addLog },
+)(LogModalAdd);
