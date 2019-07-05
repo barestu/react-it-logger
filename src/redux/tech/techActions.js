@@ -26,7 +26,6 @@ export const getTechs = () => async (dispatch) => {
 };
 
 export const addTech = (tech) => async (dispatch) => {
-  console.log('TECH', tech);
   try {
     setLoading();
     const res = await fetch('/techs', {

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { addTech } from '../../redux/tech/techActions';
 import M from 'materialize-css/dist/js/materialize.min.js';
 
-const TechModalAdd = () => {
+const TechModalAdd = ({ addTech }) => {
   const [firstname, setFirstname] = useState('');
   const [lastname, setLastname] = useState('');
 
@@ -15,6 +15,9 @@ const TechModalAdd = () => {
       M.toast({ html: 'Please enter the first and last name'});
     } else {
       addTech({ firstname, lastname });
+
+      M.toast({ html: `${firstname} ${lastname} was added as a tech`});
+
       setFirstname('');
       setLastname('');
     }
