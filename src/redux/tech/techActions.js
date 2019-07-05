@@ -26,9 +26,9 @@ export const getTechs = () => async (dispatch) => {
 };
 
 export const addTech = (tech) => async (dispatch) => {
+  console.log('TECH', tech);
   try {
     setLoading();
-  
     const res = await fetch('/techs', {
       method: 'POST',
       body: JSON.stringify(tech),
@@ -37,7 +37,7 @@ export const addTech = (tech) => async (dispatch) => {
       },
     });
     const data = await res.json();
-  
+
     dispatch({
       type: ADD_TECH,
       payload: data,
